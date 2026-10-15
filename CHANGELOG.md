@@ -1,0 +1,31 @@
+# Changelog
+
+Versions follow [semantic versioning](https://semver.org): `MAJOR.MINOR.PATCH`. While below 1.0, a
+MINOR bump means new features or changed behaviour, a PATCH bump means fixes only.
+
+## [0.3.0] - 2026-10-15
+
+- Music capture in the service: whole desktop or chosen apps (WASAPI loopback), stereo analysis with
+  beats, hi-hats, tone and sections, light delay.
+- Screen capture in the service: DXGI desktop duplication, shrunk on the GPU; real monitor resolutions.
+- Music and screen capture run only while one of their effects is on the lights and stop by
+  themselves; a minimized app gets no preview frames.
+- Windows installer `RGB Studio Setup.exe` with uninstaller (Windows Settings → Apps), start at login
+  via the standard Startup entry, Start menu and desktop shortcuts. Replaces `install.ps1`.
+- "Saving…" / "Applying to devices…" indicator while changes reach the hardware.
+- Studio layout fixed on small or scaled windows; the app opens at a size that fits scaled screens.
+- App and service versions shown in Settings → Background service, with a warning if they differ.
+
+## [0.2.0] - internal builds
+
+- The `rgbd` service (Rust): keeps the lighting running with no app open; own OpenRGB SDK client;
+  control API on 127.0.0.1:7420 with health check.
+- RGB Studio desktop app (Tauri): the UI in a window; shows whether the service is running, not
+  responding or stopped; start / restart / stop / kill; the lights switch follows the service.
+- `rgbctl` command-line client for Windows and Linux.
+- Settings import from older installs.
+
+## [0.1.0]
+
+- The original Python version: FastAPI server + web UI, 39 effects, presets, paint, layers, sensors,
+  music and screen effects.
