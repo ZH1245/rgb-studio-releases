@@ -28,14 +28,14 @@ RGB Studio **requires OpenRGB**: OpenRGB talks to the hardware, RGB Studio contr
    add the fan headers, RAM and other zones you want to control, and set how many fans and LEDs each has.
 
 What the installer does: installs the app, the service and `rgbctl` to `%LOCALAPPDATA%\RGB Studio`,
-adds Start menu and desktop shortcuts, makes the service start when you log in (it's listed in
-**Task Manager → Startup apps** as *RGB Studio Service*, where you can switch it off), and starts it
-now. It installs no drivers. Your settings are kept in `%APPDATA%\RGB Studio`.
+adds Start menu and desktop shortcuts, makes the service start as soon as you log in (a **Task
+Scheduler** entry named *RGB Studio*, so it doesn't wait behind other startup apps; disable it there if you
+ever want to), and starts it now. It installs no drivers. Your settings are kept in `%APPDATA%\RGB Studio`.
 
 **Update:** run the new version's installer. Your settings stay.
 
 **Uninstall:** Windows **Settings → Apps → Installed apps → RGB Studio → Uninstall** (or *Uninstall RGB
-Studio* in the Start menu). It stops the service and removes the app and the startup entry. Tick
+Studio* in the Start menu). It stops the service and removes the app and its start-at-login entry. Tick
 **Delete the application data** to remove your settings and presets too; otherwise they stay for a
 later reinstall.
 

@@ -3,6 +3,13 @@
 Versions follow [semantic versioning](https://semver.org): `MAJOR.MINOR.PATCH`. While below 1.0, a
 MINOR bump means new features or changed behaviour, a PATCH bump means fixes only.
 
+## [0.3.2] - 2026-10-16
+
+- Save a built-in mode to each device's own memory (Settings → When RGB Studio isn't running): it shows
+  from power-on until the service starts, and after it stops. MSI boards and Corsair RAM supported.
+- Faster start at login: the service starts through Task Scheduler as soon as you log in instead of
+  waiting behind other startup apps, and retries OpenRGB every second while it's starting.
+
 ## [0.3.1] - 2026-10-16
 
 - Clear guidance when nothing can be controlled: Setup and Studio explain whether OpenRGB isn't
