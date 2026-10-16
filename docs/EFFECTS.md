@@ -1,6 +1,6 @@
 # Effects reference
 
-RGB Studio has **39 effects**. Pick one in Studio → Effects → **Change**; its settings appear
+RGB Studio has **40 effects**. Pick one in Studio → Effects → **Change**; its settings appear
 underneath. The settings,
 ranges and defaults below are exactly what the UI shows.
 
@@ -19,6 +19,7 @@ was copied. Effects without that line (Relay, Neon chase, Storm, Auto DJ, Stereo
 - **Sensors** — [Sensor reactive](#temperature)
 - **Premium ✦** — [Relay](#relay), [Spin & orbit](#spin), [Silk tides](#silk), [Aurora](#aurora), [Pacifica](#pacifica), [Plasma](#plasma), [Neon chase](#chase), [Fire](#fire), [Ripples & fireworks](#ripple), [Spotlights](#spotlights), [Sweep & lighthouse](#sweep), [Warp galaxy](#warp), [Bouncing balls](#bouncing-balls), [Meteor shower & matrix](#meteor-shower), [Storm](#storm)
 - **Classics** — [Static / Paint](#static), [Solid color](#solid), [Breathing / heartbeat](#breathing), [Color flow](#rainbow), [Strobe / flash](#strobe), [Candle](#candle), [Stack / fill / wipe](#stack), [Wave](#wave), [Comet / scanner](#comet), [Dissolve](#dissolve), [Twinkle / fairy lights](#twinkle), [Railway](#railway), [Sunrise / sunset](#sunrise)
+- **Custom** — [Custom effect](#recipe)
 
 ## Music ♪
 
@@ -40,6 +41,7 @@ Reacts to whatever is playing: kicks radiate from the centre, hi-hats sparkle, p
 | Change palette with the music | on/off | `on` |  |
 | Sparkle | 0–1.5 | `0.6` |  |
 | Idle glow | 0–0.5 | `0.06` | minimum glow so lights never go fully dark |
+_No settings._
 
 <a id="stereo-field"></a>
 ### Stereo field
@@ -57,6 +59,7 @@ Bass, mids and highs glow where they sit in the stereo image: a sound moving lef
 | Spot width | 0.1–1 | `0.35` |  |
 | Stereo axis | choice: `horizontal` / `vertical` | `horizontal` |  |
 | Idle glow | 0–0.5 | `0.06` | minimum glow so lights never go fully dark |
+_No settings._
 
 <a id="beat-pulse"></a>
 ### Beat pulse
@@ -73,6 +76,7 @@ Every fan flashes on the kick and fades between beats; each beat steps to the ne
 | Feel | choice: `smooth` / `punchy` | `smooth` | *smooth* (no flashing, default) or *punchy* (sharp, instant) |
 | Idle glow | 0–0.5 | `0.06` | minimum glow so lights never go fully dark |
 | Ripple through fans | 0–0.3 | `0.0` |  |
+_No settings._
 
 <a id="bass-relay"></a>
 ### Bass relay
@@ -90,6 +94,7 @@ Each kick launches a comet. In stereo mode it starts on the side the sound comes
 | Comets start | choice: `stereo` / `chain` | `stereo` |  |
 | Tail | 0.05–1 | `0.3` |  |
 | Idle glow | 0–0.5 | `0.06` | minimum glow so lights never go fully dark |
+_No settings._
 
 <a id="puddles"></a>
 ### Puddles
@@ -108,6 +113,7 @@ Every kick drops a pool of color somewhere on the case that spreads and fades; l
 | Feel | choice: `smooth` / `punchy` | `smooth` | *smooth* (no flashing, default) or *punchy* (sharp, instant) |
 | Pool size | 0.08–0.6 | `0.25` |  |
 | Idle glow | 0–0.5 | `0.06` | minimum glow so lights never go fully dark |
+_No settings._
 
 <a id="spectrum"></a>
 ### Spectrum
@@ -128,6 +134,7 @@ Level meters: each ring fills with its frequency band (clockwise or mirrored fro
 | Peak dots | on/off | `on` |  |
 | Spin with music (glow) | on/off | `on` |  |
 | Idle glow | 0–0.5 | `0.06` | minimum glow so lights never go fully dark |
+_No settings._
 
 <a id="mood-drift"></a>
 ### Mood drift
@@ -143,6 +150,7 @@ Colors flow faster and glow brighter as the music gets more intense; calm tracks
 | Sensitivity | 0.2–3 | `1.0` | how strongly the music drives the lights |
 | Feel | choice: `smooth` / `punchy` | `smooth` | *smooth* (no flashing, default) or *punchy* (sharp, instant) |
 | Calm brightness | 0.05–1 | `0.35` |  |
+_No settings._
 
 <a id="sparkle-hits"></a>
 ### Sparkle hits
@@ -159,6 +167,7 @@ Hi-hats and snares fire sparkles; beats burst across every fan.
 | Feel | choice: `smooth` / `punchy` | `smooth` | *smooth* (no flashing, default) or *punchy* (sharp, instant) |
 | Base color | color | `#06060f` |  |
 | Density | 0.1–4 | `1.0` |  |
+_No settings._
 
 ## Screen ▣
 
@@ -176,6 +185,7 @@ Fans take their colors from your screen: each LED from the matching spot, per fa
 | Brightness boost | 0.3–3 | `1.3` |  |
 | Ignore dark below | 0–0.4 | `0.06` |  |
 | Sample area | 0.02–0.5 | `0.12` |  |
+_No settings._
 
 <a id="screen-motion"></a>
 ### Screen motion
@@ -188,6 +198,7 @@ Lights up where the picture moves, in the moving thing's colors: a car passing o
 | Trail (s) | 0.05–2 | `0.35` |  |
 | Ambient glow | 0–0.6 | `0.1` |  |
 | Saturation boost | 0.5–3 | `1.5` |  |
+_No settings._
 
 ## Sensors
 
@@ -210,6 +221,7 @@ Color or fill driven by a CPU/GPU/board sensor. Put it on a whole fan or just an
 | Display | choice: `color` / `gauge` / `gauge-ring` | `color` |  |
 | Pulse when hot | on/off | `on` |  |
 | Smoothing | 0–0.99 | `0.85` |  |
+_No settings._
 
 ## Premium ✦
 
@@ -231,6 +243,7 @@ A glowing comet laps each fan, then hands off to the next fan down the chain.
 | Laps per fan | 0.5–4 | `1.0` |  |
 | Tail | 0.1–1 | `0.6` |  |
 | Afterglow | 0–0.5 | `0.12` |  |
+_No settings._
 
 <a id="spin"></a>
 ### Spin & orbit
@@ -254,6 +267,7 @@ Arcs, orbs or soft spiral arms turning inside every fan. Gears makes neighbourin
 | Fan twist | 0–1 | `0.0` |  |
 | Counter-rotate neighbours | on/off | `off` |  |
 | Background glow | 0–0.6 | `0.04` |  |
+_No settings._
 
 <a id="silk"></a>
 ### Silk tides
@@ -270,6 +284,7 @@ Satin-smooth color tides rolling through the chain, with a soft sheen where the 
 | Shuffle | 0–99999 | `7` | the 🎲 Shuffle button: picks a new random set when Colors = random |
 | Speed | 0–5 | `1.0` | animation speed for this effect (multiplied by the global speed in the top bar) |
 | Sheen | 0–1 | `0.35` |  |
+_No settings._
 
 <a id="aurora"></a>
 ### Aurora
@@ -287,6 +302,7 @@ Slow, organic curtains of color drifting across the whole case.
 | Speed | 0–5 | `0.6` | animation speed for this effect (multiplied by the global speed in the top bar) |
 | Detail | 0.3–5 | `1.6` |  |
 | Contrast | 0.5–4 | `1.6` |  |
+_No settings._
 
 <a id="pacifica"></a>
 ### Pacifica
@@ -303,6 +319,7 @@ Layered ocean swells rolling across the case, with whitecaps where waves meet.
 | Shuffle | 0–99999 | `7` | the 🎲 Shuffle button: picks a new random set when Colors = random |
 | Speed | 0–5 | `0.6` | animation speed for this effect (multiplied by the global speed in the top bar) |
 | Whitecaps | 0–1 | `0.6` |  |
+_No settings._
 
 <a id="plasma"></a>
 ### Plasma
@@ -319,6 +336,7 @@ Interfering sine fields across the case — liquid, lava-lamp motion.
 | Shuffle | 0–99999 | `7` | the 🎲 Shuffle button: picks a new random set when Colors = random |
 | Speed | 0–5 | `1.0` | animation speed for this effect (multiplied by the global speed in the top bar) |
 | Scale | 0.5–10 | `3.0` |  |
+_No settings._
 
 <a id="chase"></a>
 ### Neon chase
@@ -336,6 +354,7 @@ Soft-edged neon segments marching through every fan as one continuous strip.
 | Segment (LEDs) | 1–16 | `4.0` |  |
 | Gap (LEDs) | 0–16 | `4.0` |  |
 | Softness | 0–1 | `0.5` |  |
+_No settings._
 
 <a id="fire"></a>
 ### Fire
@@ -350,6 +369,7 @@ Flickering flames that rise inside each ring (from the ring's bottom to its top)
 | Flame | choice: `ember` / `spirit` | `ember` |  |
 | Flame height | 0.2–1.2 | `0.7` |  |
 | Flicker | 0–2 | `1.0` |  |
+_No settings._
 
 <a id="ripple"></a>
 ### Ripples & fireworks
@@ -369,6 +389,7 @@ Rings of light spread from random points across the case: gentle water drops, or
 | Bursts / s | 0.1–4 | `0.8` |  |
 | Ring width | 0.02–0.3 | `0.08` |  |
 | Base glow | 0–0.3 | `0.04` |  |
+_No settings._
 
 <a id="spotlights"></a>
 ### Spotlights
@@ -387,6 +408,7 @@ Soft colored spotlights drift across the case like a stage light show.
 | Spots | 1–6 | `3` |  |
 | Spot size | 0.08–0.6 | `0.25` |  |
 | Ambient | 0–0.3 | `0.04` |  |
+_No settings._
 
 <a id="sweep"></a>
 ### Sweep & lighthouse
@@ -407,6 +429,7 @@ A band of light or a flowing gradient crossing the whole case, or twin lighthous
 | Angle (°) | 0–360 | `0.0` |  |
 | Width | 0.05–1 | `0.3` |  |
 | Background glow | 0–1 | `0.0` | minimum glow so lights never go fully dark |
+_No settings._
 
 <a id="warp"></a>
 ### Warp galaxy
@@ -423,6 +446,7 @@ Stars stream outward from the centre of the case like jumping to hyperspace.
 | Shuffle | 0–99999 | `7` | the 🎲 Shuffle button: picks a new random set when Colors = random |
 | Speed | 0–5 | `1.0` | animation speed for this effect (multiplied by the global speed in the top bar) |
 | Stars | 6–60 | `24` |  |
+_No settings._
 
 <a id="bouncing-balls"></a>
 ### Bouncing balls
@@ -441,6 +465,7 @@ Balls bounce under gravity inside every fan, losing height until kicked again; p
 | Style | choice: `balls` / `popcorn` | `balls` |  |
 | Balls per fan | 1–4 | `2` |  |
 | Pops / s (popcorn) | 0.2–6 | `1.5` |  |
+_No settings._
 
 <a id="meteor-shower"></a>
 ### Meteor shower & matrix
@@ -462,6 +487,7 @@ Streaks falling across the whole case: meteors at any angle, or Matrix-style dig
 | Tail length | 0.05–1 | `0.35` |  |
 | Width (meteors) | 0.02–0.3 | `0.08` |  |
 | Columns (matrix) | 3–24 | `10` |  |
+_No settings._
 
 <a id="storm"></a>
 ### Storm
@@ -474,6 +500,7 @@ Brooding clouds with lightning that forks through a few fans at a time.
 | Lightning | color | `#d8e6ff` |  |
 | Speed | 0–5 | `1.0` | animation speed for this effect (multiplied by the global speed in the top bar) |
 | Strikes / 10 s | 0–20 | `3.0` |  |
+_No settings._
 
 ## Classics
 
@@ -487,6 +514,7 @@ Per-LED colors painted on the case canvas.
 | Setting | Values | Default | Notes |
 | --- | --- | --- | --- |
 | Unpainted LEDs | color | `#000000` |  |
+_No settings._
 
 <a id="solid"></a>
 ### Solid color
@@ -500,6 +528,7 @@ Steady color: one color everywhere, or a different color per fan from your color
 | Custom colors | color list | `#ff2a6d, #05d9e8, #7b5cff` | your colors when Colors = custom (1–8) |
 | Shuffle | 0–99999 | `7` | the 🎲 Shuffle button: picks a new random set when Colors = random |
 | Fill | choice: `per fan` / `all fans` | `per fan` |  |
+_No settings._
 
 <a id="breathing"></a>
 ### Breathing / heartbeat
@@ -518,6 +547,7 @@ Slow fade in and out that steps to the next color each breath, or a lub-dub hear
 | Rhythm | choice: `breathe` / `heartbeat` | `breathe` |  |
 | Resting glow | 0–0.8 | `0.0` | minimum glow so lights never go fully dark |
 | Fan delay | 0–1 | `0.0` |  |
+_No settings._
 
 <a id="rainbow"></a>
 ### Color flow
@@ -538,6 +568,7 @@ Colors flowing along the chain, around each ring, across the case, or the whole 
 | Repeats | 0.1–6 | `1.0` |  |
 | Fan offset | 0–1 | `0.1` |  |
 | Glitter | 0–4 | `0.0` |  |
+_No settings._
 
 <a id="strobe"></a>
 ### Strobe / flash
@@ -555,6 +586,7 @@ Sharp flashes: all fans together, alternating fans, or a random fan each flash.
 | Speed | 0–5 | `1.0` | animation speed for this effect (multiplied by the global speed in the top bar) |
 | Flash length | 0.03–0.9 | `0.15` |  |
 | Flash | choice: `all` / `alternate` / `random fan` | `all` |  |
+_No settings._
 
 <a id="candle"></a>
 ### Candle
@@ -569,6 +601,7 @@ Warm flame flicker, per LED or per fan.
 | Speed | 0–5 | `1.0` | animation speed for this effect (multiplied by the global speed in the top bar) |
 | Flicker | 0–1 | `0.5` |  |
 | Flicker | choice: `per-led` / `per-fan` | `per-led` |  |
+_No settings._
 
 <a id="stack"></a>
 ### Stack / fill / wipe
@@ -588,6 +621,7 @@ Fills LED by LED, holds, then drains; drop stacks falling LEDs; wipe paints each
 | Scope | choice: `chain` / `fan` | `chain` |  |
 | Drain from | choice: `end` / `start` | `end` |  |
 | Hold (s) | 0–5 | `0.8` |  |
+_No settings._
 
 <a id="wave"></a>
 ### Wave
@@ -606,6 +640,7 @@ Brightness waves travelling along the chain.
 | Sharpness | 0.5–8 | `2.0` |  |
 | Floor | 0–1 | `0.05` | minimum glow so lights never go fully dark |
 | Scope | choice: `chain` / `fan` | `chain` |  |
+_No settings._
 
 <a id="comet"></a>
 ### Comet / scanner
@@ -629,6 +664,7 @@ Bright heads with fading tails. Loop runs them round the chain or each fan; boun
 | Scope | choice: `chain` / `fan` | `chain` |  |
 | Ease at ends | on/off | `on` |  |
 | Rainbow tail | on/off | `off` |  |
+_No settings._
 
 <a id="dissolve"></a>
 ### Dissolve
@@ -645,6 +681,7 @@ LEDs switch to the next color one at a time in random order until the whole case
 | Shuffle | 0–99999 | `7` | the 🎲 Shuffle button: picks a new random set when Colors = random |
 | Speed | 0–5 | `1.0` | animation speed for this effect (multiplied by the global speed in the top bar) |
 | Fade (s) | 0–1.5 | `0.25` |  |
+_No settings._
 
 <a id="twinkle"></a>
 ### Twinkle / fairy lights
@@ -664,6 +701,7 @@ Random LEDs flash and fade over a dim background (sparkle), or each LED glows in
 | Style | choice: `sparkle` / `gentle` | `sparkle` |  |
 | Density | 0.02–3 | `0.5` |  |
 | Fade (sparkle) | 0.3–10 | `2.5` |  |
+_No settings._
 
 <a id="railway"></a>
 ### Railway
@@ -679,6 +717,7 @@ Neighbouring LEDs cross-fade between two colors, like a railway crossing.
 | Custom colors | color list | `#ff2a6d, #ffb800, #05d9e8` | your colors when Colors = custom (1–8) |
 | Shuffle | 0–99999 | `7` | the 🎲 Shuffle button: picks a new random set when Colors = random |
 | Speed | 0–5 | `1.0` | animation speed for this effect (multiplied by the global speed in the top bar) |
+_No settings._
 
 <a id="sunrise"></a>
 ### Sunrise / sunset
@@ -691,6 +730,55 @@ A slow sunrise (or sunset) from night through red and orange to warm daylight; l
 | --- | --- | --- | --- |
 | Duration (min) | 0.5–60 | `5.0` |  |
 | Sunset instead | on/off | `off` |  |
+_No settings._
+
+## Custom
+
+Your own effects, made of layers of building blocks. Make one with Studio → ✨ AI → *A new effect* (any chat AI designs it from a prompt RGB Studio writes); saved ones are under Change → Custom. A recipe is data, not code: RGB Studio checks every value before using it.
+
+<a id="recipe"></a>
+### Custom effect
+
+An effect built from layers (wave, chase, sparkle…), made with ✨ AI or shared as a recipe.
+
+| Setting | Values | Default | Notes |
+| --- | --- | --- | --- |
+| Colors | choice: `rainbow` / `palette` / `custom` / `random` | `palette` | where colors come from: *rainbow*, a named *palette*, your own *custom* colors, or *random* |
+| Palette | palette | `aurora` | the palette used when Colors = palette |
+| Custom colors | color list | `#ff2a6d, #ffb800, #05d9e8` | your colors when Colors = custom (1–8) |
+| Shuffle | 0–99999 | `7` | the 🎲 Shuffle button: picks a new random set when Colors = random |
+| Speed | 0–5 | `1.0` | animation speed for this effect (multiplied by the global speed in the top bar) |
+
+**Building blocks** (one per layer, up to 6 layers drawn bottom to top):
+
+| Block | What it does |
+| --- | --- |
+| `solid` | every LED lit; with palette colors, *fan offset* gives each fan its own color and *color drift* cycles them |
+| `gradient` | palette colors spread along the axis; *speed* moves them |
+| `wave` | soft bright bands moving along the axis (*scale* = number of bands, *width* = band size) |
+| `pulse` | the axis breathes in and out; *fan offset* makes fans pulse one after another |
+| `chase` | *count* heads with fading tails (*width* = tail length); around each fan by default |
+| `sparkle` | random LEDs flash and fade (*count* = how many, *width* = how long they last) |
+| `noise` | organic drifting blobs (*scale* = blob size, *width* = how much is lit) |
+| `fill` | the axis fills up and starts over, like a loading bar |
+
+**Layer settings** (all optional):
+
+| Setting | Values |
+| --- | --- |
+| `along` | chain / fan / x / y / center: through all fans in order, around each fan, left to right, top to bottom, out from the middle |
+| `color` | `palette` (the effect's Colors) or a fixed `#RRGGBB` |
+| `color_drift` | -2–2: palette colors shift over time |
+| `speed` | -5–5 cycles per second (negative = the other way), times the effect's Speed slider |
+| `scale` | 0.1–8: repeats along the axis |
+| `width` | 0.02–1: size of the lit part |
+| `count` | 1–16: chase heads / sparkle amount |
+| `fan_offset` | -1–1: each next fan runs this much of a cycle later |
+| `phase` | -1–1: where in its cycle the layer starts (two layers 0.5 apart take turns) |
+| `blend` | over / add / max / multiply (multiply darkens what's below: a moving mask) |
+| `opacity` | 0–1 |
+| `react` | none / level / bass / mid / treble / beat: music drives the layer's brightness |
+| `floor` | 0–1: brightness kept while the music is quiet |
 
 ## Built-in palettes
 

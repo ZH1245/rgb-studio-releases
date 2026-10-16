@@ -3,6 +3,35 @@
 Versions follow [semantic versioning](https://semver.org): `MAJOR.MINOR.PATCH`. While below 1.0, a
 MINOR bump means new features or changed behaviour, a PATCH bump means fixes only.
 
+## [0.5.0] - 2026-10-16
+
+- Mixed wiring per header (Setup → a fan header → Mixed): list the fans in data order, each with its own
+  LED count, in series or in parallel with an earlier fan. Every fan shows its LED addresses on the header
+  (e.g. LED 9–16). Parallel fans show their twin's colors and get no effect of their own.
+- LED walker (Setup → Map the LEDs one by one): a white LED steps along the header's data line so you can
+  see where each fan starts; "A fan starts here" fills in the list.
+- Custom effects: an effect can be a recipe of up to 6 layers of building blocks (solid, gradient, wave,
+  pulse, chase, sparkle, noise, fill) with direction, speed, size, count, offset per fan, phase, blending
+  and music reaction. ✨ AI → "A new effect" asks any chat AI to design one; try it on your lights, then
+  keep it under Change → Custom. Recipes are data, not code, and every value is checked.
+- New look: black hardware UI where the playing preset is the only color: sliders, toggles, selection,
+  the power button and the logo ring take the active preset's color. Geist fonts (bundled, works offline).
+  Studio in three columns: devices, canvas with the preset strip, and an inspector with Effect / Colors /
+  Layers / Brightness tabs. Setup: zones on the left, the case and the chain order on the right. Sensors:
+  one grid of live readings per source. Settings: a section index and label/control rows.
+- Smoother live preview: LEDs are drawn on a canvas in their own animation loop, blending between the
+  frames the service sends, so motion runs at the screen's refresh rate without stutter (and the costly
+  blur glow is gone).
+- AI prompts show their size; "Short prompt" (about half) gives full settings only for the effects that
+  fit the request, for small or local AIs. The request box holds up to 1,000 characters.
+- ✨ AI (Studio, next to the device name): describe a look, copy a prompt into any chat AI, paste its
+  answer back. RGB Studio checks it, shows what will change, applies it live, and can undo. The AI can set
+  a new palette, the effect and its settings for all devices or per device, brightness, speed, and save a
+  preset. No API key; the app sends nothing anywhere.
+- New fans are added to the chain order next to the other fans of their header.
+- Automatic fan names follow the wiring (a header switched from splitter to daisy-chain no longer keeps
+  "Splitter ×5" on its first fan); names you typed stay.
+
 ## [0.4.0] - 2026-10-16
 
 - Power saving (Settings → Power saving): when the screen turns off, dim the lights (with a fade), show a

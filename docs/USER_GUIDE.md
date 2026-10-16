@@ -25,11 +25,17 @@ A tour of every screen and option. For what each effect does and all of its sett
 
 ## Top bar and navigation
 
+The app is black and grey on purpose: its only color is the **accent** (sliders, switches, selection, the
+power button, the ring logo), and that comes from the preset that is playing, so switching presets re-colors
+the app.
+
 - **Left sidebar** — Studio, Setup, Sensors, Settings, and **Service** at the bottom. Its dot shows the
   background service: green = running, amber = starting / waiting for OpenRGB, red = not responding,
   grey = stopped. Click it for the service panel (see [Settings → Background service](#settings)).
 - **Title line** — the controlled device(s) and the live frame rate. It turns amber while waiting for OpenRGB,
   and says *Service: stopped* (or *not responding*) when the service isn't running the lights.
+- The brightness, speed and power controls are in the top bar of **Studio**; other pages show their own
+  actions there (e.g. **Finish setup** on the first run).
 - **☀ Brightness** — master brightness for everything.
 - **Speed** — speeds up or slows down every effect (0.05×–4×).
 - **⏻ Power** — lights on/off. It only shows *on* while the service is actually running the lights, so it's
@@ -41,7 +47,12 @@ Closing the app never stops the lights: the service keeps running in the backgro
 
 ## Studio
 
-The main screen: device list on the left, the live canvas in the middle, and the effect controls on the right.
+The main screen in three columns: the device list on the left, the live canvas with the preset strip in the
+middle, and the **inspector** on the right. The inspector says what you're editing (All devices or one device,
+and whether it follows All), has **✨ AI**, and four tabs: **Effect** (the effect, Change effect, its motion
+settings), **Colors** (color source, palette, custom colors), **Layers**, and **Brightness** (per device and
+header). **Paint** appears while painting; the strip's **Manage** opens **Presets**. On narrow windows the
+columns stack.
 
 ### Devices list
 
@@ -79,11 +90,27 @@ The main screen: device list on the left, the live canvas in the middle, and the
    - **Make all follow** (All devices) — removes every device's own effect.
    - **Follow All** (a device) — removes this device's own effect.
    - A note appears if a layer covers the whole device ("its own effect isn't visible").
+   - **✨ AI** — get a look or a brand-new effect from any chat AI (ChatGPT, Claude, Gemini…). Choose at the
+     top: **A look from existing effects** or **A new effect**.
+     *A new effect*: the prompt teaches the AI RGB Studio's building blocks (solid, gradient, wave, pulse,
+     chase, sparkle, noise, fill; up to 6 layers, see [EFFECTS.md](EFFECTS.md#recipe)). Paste its answer: RGB
+     Studio shows the layers and anything it adjusted, **Try on …** runs it on the selected device (Undo puts
+     back what was there), **Save to my effects** keeps it under **Change → Custom**. The AI never writes code:
+     an effect is a recipe of settings that RGB Studio checks.
+     *A look from existing effects* works in three steps:
+     describe what you want (or pick an idea), **Copy prompt** and paste it into the AI, then paste the AI's
+     whole answer back. The prompt explains every effect and its settings, your devices and your current look.
+     RGB Studio checks the answer and shows **What will change** (new palette, effect per device, brightness,
+     speed, an optional preset) and what it ignored. **Apply** makes it live; **Undo** puts back the effects,
+     brightness and speed and removes a palette or preset it created. The app sends nothing anywhere: you do the
+     copying.
 3. **Layers on top** — each layer with its effect, which LEDs it covers and which other devices share it.
    **+ Layer** adds one for the selected device (it starts as *Sensor reactive*). Click a layer to edit it:
    name, which items it covers, **First LED** and **Count** (e.g. only LEDs 1–3 of each fan), **Remove**.
 4. **Effect card** — the effect's name, category and description, then **Change** to open the picker (search
-   box and category filters: Music, Screen, Sensors, Premium, Classics). Under it, the effect's own settings
+   box and category filters: Music, Screen, Sensors, Premium, Classics, Custom). **Custom** lists your own
+   effects (✨, × deletes one); a custom effect's card shows its layers and, until saved, **Save to my
+   effects**. Under it, the effect's own settings
    (listed per effect in [EFFECTS.md](EFFECTS.md)). Most effects share:
    - **Colors**: rainbow / palette / custom / random, with the palette row, your color swatches (+ to add,
      × to remove) or **🎲 Shuffle random colors**.
@@ -111,12 +138,23 @@ immediately.
 - **Zone card**:
   - *Name* — what the device is called everywhere in the app. *Remove* stops controlling the zone.
   - *Shape*: **Fan ring / Bar / strip / Dot**.
-  - For fan rings: **Daisy-chain** (each fan its own) or **Splitter / mirrored** (all fans identical).
+  - For fan rings: **Daisy-chain** (each fan its own), **Splitter / mirrored** (all fans identical), or
+    **Mixed** (fans of different kinds on one header, in series and in parallel).
   - **Fans / Segments** count, and **LEDs per fan**. Zones with a fixed size (e.g. RAM) show "fixed by the
     device" instead.
+  - **Mixed**: one row per fan, in the order the data reaches them. Each has its own **LEDs** count and starts
+    either **after the previous fan (series)** or with the **same LEDs as** an earlier fan (**parallel**: a hub,
+    a splitter, or a fan whose pass-through repeats its input). Each row shows its LED addresses on the header
+    (e.g. *LED 9–16*). A parallel fan always shows what its twin shows; no software can separate them, so it
+    gets no effect of its own and is marked *mirrors*.
+  - **Map the LEDs one by one →** — the LED walker: a white LED walks along the header's data line (the rest
+    glows dim blue), stepped with **−8 −1 +1 +8**. It says which fan and LED it is set up as. Walk from LED 1;
+    each time the white LED jumps to the next fan, press **A fan starts here** (this switches to Mixed and sizes
+    the fans before it). If the white LED shows on two fans at once, set the second one to *same LEDs as* the
+    first. **Data line length** lights more LEDs past the last fan to find fans not set up yet.
   - **Not sure? Find the LED count →** — the LED finder: the first LED lights red and the last green. Raise
     **Zone LEDs** until the green LED disappears, step back one, then **Use N**. **Cancel** restores the effect.
-- **Per item**: rename, **Identify** (lights only this item: LED 1 red, then amber, green to show direction;
+- **Per item**: rename, its LED addresses, **Identify** (lights only this item: LED 1 red, then amber, green to show direction;
   "Lit ✓" turns it off), **Rotation** (fans: which LED counts as the start) or the **↓ → ↑ ←** arrows (bars), and
   **Reverse** (direction).
 - **Not detected right now** — saved zones whose device isn't connected; they resume when it's back.
@@ -124,7 +162,7 @@ immediately.
 - **Chain order** — ↑ ↓ to set how travelling effects flow across items and devices.
 - **Welcome banner** (first run) — **Finish setup** hides it.
 
-Test patterns (LED finder, Identify) switch themselves off when you leave Setup, close the page, or after two
+Test patterns (LED finder, LED walker, Identify) switch themselves off when you leave Setup, close the page, or after two
 minutes.
 
 ## Sensors
