@@ -164,7 +164,8 @@ minutes.
   service runs. Each device can also store one of its own built-in modes (Static, Breathing, Rainbow wave…)
   in its memory: that's what shows from power-on until the service starts, and after it stops. Per device:
   pick the mode, its color(s) or *Random colors*, and speed, then **Save to device**. The live effect comes
-  back right after. "stored: …" shows what's saved.
+  back right after. "stored: …" shows what's saved. Any brand works if its OpenRGB driver can save modes to
+  the device; devices that can't (some simple controllers, many GPUs) aren't listed.
 - **Startup & shutdown** — the preset the service applies when it starts (or restore the last state); when the
   service stops or Windows shuts down: keep the last frame, show a preset, or turn lights off. Closing the app
   doesn't count.

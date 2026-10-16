@@ -22,7 +22,8 @@ MINOR bump means new features or changed behaviour, a PATCH bump means fixes onl
 ## [0.3.2] - 2026-10-16
 
 - Save a built-in mode to each device's own memory (Settings → When RGB Studio isn't running): it shows
-  from power-on until the service starts, and after it stops. MSI boards and Corsair RAM supported.
+  from power-on until the service starts, and after it stops. Works with any device whose OpenRGB
+  driver can save modes (tested with MSI boards and Corsair RAM); others don't appear there.
 - Faster start at login: the service starts through Task Scheduler as soon as you log in instead of
   waiting behind other startup apps, and retries OpenRGB every second while it's starting.
 
