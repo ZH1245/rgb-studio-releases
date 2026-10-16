@@ -3,8 +3,9 @@
 Per-LED lighting for fans, RAM and any other RGB device that [OpenRGB](https://openrgb.org) can control,
 in the spirit of SignalRGB, with no cloud, no accounts and no telemetry. RGB Studio loads no drivers.
 
-**[⬇ Download the latest version](https://github.com/ZH1245/rgb-studio-releases/releases/latest)** —
-`RGB Studio Setup <version>.exe` (Windows 10/11, about 2.5 MB). Run it, press Install. Uninstall from
+**[⬇ Download RGB Studio](https://github.com/ZH1245/rgb-studio-releases/releases/latest)** and
+**[⬇ OpenRGB](https://openrgb.org/releases.html)** (required).
+`RGB Studio Setup <version>.exe` is for Windows 10/11, about 2.5 MB. Run it, press Install. Uninstall from
 Windows Settings → Apps.
 
 ## What you get

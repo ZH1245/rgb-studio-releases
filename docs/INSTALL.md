@@ -12,7 +12,7 @@ Nothing else to install: no Rust, Node or Python.
 
 RGB Studio **requires OpenRGB**: OpenRGB talks to the hardware, RGB Studio controls the lights through it.
 
-1. Install [OpenRGB](https://openrgb.org) (1.0 or newer) and open it **as administrator** once so it detects
+1. Install [OpenRGB](https://openrgb.org/releases.html) (1.0 or newer) and open it **as administrator** once so it detects
    your devices, including RAM. Check that your devices show up in OpenRGB's own window.
 2. In OpenRGB: **SDK Server → Start Server**. Turn on *Start at login* and *Start server* in OpenRGB's
    settings so it's ready every time.
