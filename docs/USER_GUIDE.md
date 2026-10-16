@@ -188,6 +188,7 @@ device → *A few LEDs*, 3 → **Show…**. Or in Studio: select the device → 
 | Symptom | Fix |
 | --- | --- |
 | "Waiting for OpenRGB" | Start OpenRGB and enable its SDK server (Settings → SDK Server → Start). RGB Studio reconnects on its own. |
+| No devices, even in OpenRGB's own window (e.g. Corsair RAM) | RGB Studio only sees what OpenRGB detects. Run OpenRGB **as administrator** (RAM and many boards use SMBus, which needs it), fully quit iCUE / MSI Center / Armoury Crate / SignalRGB (also from the tray), use OpenRGB 1.0 or newer (DDR5 support), then OpenRGB → Settings → **Rescan devices**. |
 | A device is missing in Setup | It must be detected by OpenRGB first (rescan in OpenRGB); RGB Studio follows rescans automatically. |
 | All fans on a header look identical | They're on a splitter or their pass-through is parallel; set the zone to *Splitter / mirrored*. |
 | An LED stays lit after changing counts | Use the LED finder to get the real count; LEDs beyond the configured count aren't driven. |

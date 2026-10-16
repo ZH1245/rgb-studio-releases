@@ -28,8 +28,11 @@ Windows Settings → Apps.
 
 ## Before you install
 
-1. Install [OpenRGB](https://openrgb.org), open it once so it finds your devices, and start its
-   **SDK Server** (also turn on *start at login* in OpenRGB's settings).
+RGB Studio **requires [OpenRGB](https://openrgb.org)**: OpenRGB talks to the hardware, RGB Studio drives the
+lights through it. If OpenRGB doesn't see a device, RGB Studio can't either.
+
+1. Install OpenRGB (1.0 or newer), open it **as administrator** so it finds everything (RAM needs this), check
+   your devices show in its window, and start its **SDK Server** (also turn on *start at login*).
 2. Close other RGB software (MSI Center / Mystic Light, iCUE, SignalRGB…) so they don't fight over the
    same lights.
 

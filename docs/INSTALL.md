@@ -10,7 +10,10 @@ Nothing else to install: no Rust, Node or Python.
 
 ## Before you start
 
-1. Install [OpenRGB](https://openrgb.org) and open it once so it detects your devices.
+RGB Studio **requires OpenRGB**: OpenRGB talks to the hardware, RGB Studio controls the lights through it.
+
+1. Install [OpenRGB](https://openrgb.org) (1.0 or newer) and open it **as administrator** once so it detects
+   your devices, including RAM. Check that your devices show up in OpenRGB's own window.
 2. In OpenRGB: **SDK Server → Start Server**. Turn on *Start at login* and *Start server* in OpenRGB's
    settings so it's ready every time.
 3. Close other RGB software (MSI Center / Mystic Light, iCUE, SignalRGB…). Two programs controlling
@@ -79,5 +82,6 @@ rgbctl --help              everything else
 | Problem | Fix |
 | --- | --- |
 | The page doesn't open | The service isn't running: start the "RGB Studio" task in Task Scheduler, or run `rgbd.exe` from the install folder. Its log is `%APPDATA%\RGB Studio\rgbd.log`. |
-| "Waiting for OpenRGB" | Start OpenRGB and its SDK server. RGB Studio reconnects by itself. |
+| "Waiting for OpenRGB" / "Can't reach OpenRGB" | Install OpenRGB, open it, and start its SDK server. RGB Studio reconnects by itself. |
+| No devices, even in OpenRGB's own window (e.g. Corsair RAM) | RGB Studio only sees what OpenRGB detects. Run OpenRGB **as administrator** (RAM and many boards use SMBus, which needs it), fully quit iCUE / MSI Center / Armoury Crate / SignalRGB (also from the tray), use OpenRGB 1.0 or newer (DDR5 support), then OpenRGB → Settings → **Rescan devices**. |
 | Lights flicker or fight | Another RGB program is still running. Close it. |

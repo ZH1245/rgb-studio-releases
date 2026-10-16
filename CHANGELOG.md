@@ -3,6 +3,16 @@
 Versions follow [semantic versioning](https://semver.org): `MAJOR.MINOR.PATCH`. While below 1.0, a
 MINOR bump means new features or changed behaviour, a PATCH bump means fixes only.
 
+## [0.3.1] - 2026-10-16
+
+- Clear guidance when nothing can be controlled: Setup and Studio explain whether OpenRGB isn't
+  reachable (install it, run as administrator, start the SDK server) or found no devices (run as
+  administrator, quit iCUE and other RGB software, use OpenRGB 1.0+, rescan).
+- Install guide and README state up front that OpenRGB is required, with a "no devices" fix.
+- Licensed under MIT.
+- Removed the original Python version (replaced by the service and app since 0.2.0).
+- docs/EFFECTS.md is generated from the service's effect registry (`rgbd --effects-json`).
+
 ## [0.3.0] - 2026-10-15
 
 - Music capture in the service: whole desktop or chosen apps (WASAPI loopback), stereo analysis with
