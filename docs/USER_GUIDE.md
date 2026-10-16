@@ -166,7 +166,21 @@ minutes.
   pick the mode, its color(s) or *Random colors*, and speed, then **Save to device**. The live effect comes
   back right after. "stored: …" shows what's saved.
 - **Startup & shutdown** — the preset the service applies when it starts (or restore the last state); when the
-  service stops: keep the last frame, show a preset, or turn lights off. Closing the app doesn't count.
+  service stops or Windows shuts down: keep the last frame, show a preset, or turn lights off. Closing the app
+  doesn't count.
+- **Power saving**
+  - *When the screen turns off*: **Keep going**, **Dim** (choose how far; it fades), **Show a preset** (a
+    calm one, for example), or **Lights off** (also pauses rendering). Your own lighting comes back as soon
+    as the screen turns on, and changes made meanwhile go to it.
+  - *Lights off when the PC sleeps, shuts down or logs off*. After sleep the service reconnects to
+    OpenRGB by itself, so devices that forget their settings in standby are set up again.
+- **App & updates** — *Keep in the tray when the window is closed*: the tray icon (next to the clock)
+  switches the lights on/off and changes presets; click it to open the window. Closed to the tray, the app
+  uses only a few MB. *Start in the tray when you log in*. *Tell me when a new version is out*: a bar at the
+  top links to the download page (checked at most every 6 hours; **Check now** checks right away).
+- **Report a problem** — **Report a problem on GitHub** copies a diagnostics report (versions, OpenRGB
+  connection, every device OpenRGB found, your zones, the end of the service log; your user folder name is
+  left out) and opens a new issue: paste it there. **Copy diagnostics** only copies it.
 - **Import settings** — paste the path of another RGB Studio data folder (an older version or a backup, the
   folder with `layout.json` and `state.json`) and press **Import** to replace your layout, presets and
   settings with it. The welcome screen offers the same on first run.
@@ -201,5 +215,6 @@ device → *A few LEDs*, 3 → **Show…**. Or in Studio: select the device → 
 | Flicker or fighting colors | Another RGB app (e.g. a vendor tool) is controlling the same device; close it. |
 | *Service: stopped* | Press the ⏻ switch or **Start service** in the Service panel. It also starts by itself at login. |
 | *Service: not responding* | Service panel → **Kill**, then **Start service**. Its log is `%APPDATA%\RGB Studio\rgbd.log`. |
+| Something else | Settings → Report a problem → **Report a problem on GitHub**, and paste the report into the issue. |
 | Music effects only glow dimly | Nothing is playing from the chosen source: check Settings → Audio (Full desktop, or tick the app that's playing). |
 | Screen effects only glow dimly | Check Settings → Screen is on and the right monitor is chosen. Protected video (some streaming apps) shows as black to every capture program. |

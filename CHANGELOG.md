@@ -3,6 +3,22 @@
 Versions follow [semantic versioning](https://semver.org): `MAJOR.MINOR.PATCH`. While below 1.0, a
 MINOR bump means new features or changed behaviour, a PATCH bump means fixes only.
 
+## [0.4.0] - 2026-10-16
+
+- Power saving (Settings → Power saving): when the screen turns off, dim the lights (with a fade), show a
+  preset, or turn them off; lights off while the PC sleeps, shuts down or logs off. Your own lighting
+  comes back by itself.
+- "When RGB Studio closes" now also applies when Windows shuts down or logs off.
+- After sleep the service reconnects to OpenRGB, so devices that reset in standby are set up again.
+- Tray icon: lights on/off, presets, open the window. Closing the window can leave just the tray running
+  (a few MB), and it can start in the tray at login (Settings → App & updates).
+- New-version notice: a bar at the top when a newer release is out (can be turned off).
+- Report a problem: one click copies a diagnostics report (versions, OpenRGB, devices, zones, recent log;
+  without your user folder name) and opens a GitHub issue to paste it into.
+- Links in the app open in your browser.
+- Service log records late frames, slow writes to OpenRGB and any message OpenRGB sends by itself, with
+  the time, to track down rare light glitches.
+
 ## [0.3.2] - 2026-10-16
 
 - Save a built-in mode to each device's own memory (Settings → When RGB Studio isn't running): it shows

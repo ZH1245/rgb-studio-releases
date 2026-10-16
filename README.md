@@ -25,6 +25,9 @@ Windows Settings → Apps.
 - **Every device on its own or all together**: per-device effects, layers on a few LEDs, brightness per
   device type, device and header, painting single LEDs, presets.
 - **Light on weak PCs**: music and screen capture only run while one of their effects is showing.
+- **Power saving**: dim, a calm preset or lights off while the screen is off; lights off while the PC sleeps.
+- **Tray icon** for lights on/off and presets, a notice when a new version is out, and a one-click
+  problem report for GitHub issues.
 - **`rgbctl`** command line: `rgbctl off`, `rgbctl load "Hearth"`, `rgbctl brightness 40`.
 
 ## Before you install

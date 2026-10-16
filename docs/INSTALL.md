@@ -32,10 +32,11 @@ adds Start menu and desktop shortcuts, makes the service start as soon as you lo
 Scheduler** entry named *RGB Studio*, so it doesn't wait behind other startup apps; disable it there if you
 ever want to), and starts it now. It installs no drivers. Your settings are kept in `%APPDATA%\RGB Studio`.
 
-**Update:** run the new version's installer. Your settings stay.
+**Update:** the app shows a bar when a new version is out; download it and run the installer. Your
+settings stay.
 
 **Uninstall:** Windows **Settings → Apps → Installed apps → RGB Studio → Uninstall** (or *Uninstall RGB
-Studio* in the Start menu). It stops the service and removes the app and its start-at-login entry. Tick
+Studio* in the Start menu). It stops the service, closes the tray icon, and removes the app and its start-at-login entries. Tick
 **Delete the application data** to remove your settings and presets too; otherwise they stay for a
 later reinstall.
 
@@ -85,3 +86,4 @@ rgbctl --help              everything else
 | "Waiting for OpenRGB" / "Can't reach OpenRGB" | Install OpenRGB, open it, and start its SDK server. RGB Studio reconnects by itself. |
 | No devices, even in OpenRGB's own window (e.g. Corsair RAM) | RGB Studio only sees what OpenRGB detects. Run OpenRGB **as administrator** (RAM and many boards use SMBus, which needs it), fully quit iCUE / MSI Center / Armoury Crate / SignalRGB (also from the tray), use OpenRGB 1.0 or newer (DDR5 support), then OpenRGB → Settings → **Rescan devices**. |
 | Lights flicker or fight | Another RGB program is still running. Close it. |
+| Anything else | In the app: Settings → Report a problem → **Report a problem on GitHub**. It copies a short report (versions, devices, log) to paste into the issue. |
