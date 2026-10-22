@@ -13,7 +13,7 @@ Windows Settings → Apps.
 - **A tiny background service** that keeps your lighting running whether or not the app is open (a few MB
   of memory, ~0.1% of one CPU core) and starts when you log in.
 - **The RGB Studio app** to change things: shows whether the service is running, and can start or stop it.
-- **39 effects**, every color-based one with rainbow, palette, your own or random colors:
+- **40 effects**, every color-based one with rainbow, palette, your own or random colors:
   - **Music ♪**: Auto DJ, Stereo field, Beat pulse, Bass relay, Puddles, Spectrum, Mood drift, Sparkle hits.
     Listens to the whole desktop or only the apps you pick (e.g. Spotify), in stereo. *Smooth* or *punchy*.
   - **Screen ▣**: Screen ambience, Screen motion.
@@ -48,7 +48,7 @@ lights through it. If OpenRGB doesn't see a device, RGB Studio can't either.
 - **[Install guide](docs/INSTALL.md)**: install, update, uninstall, anti-cheat notes, troubleshooting.
 - **[User guide](docs/USER_GUIDE.md)**: every screen and option, recipes.
 - **[Effects reference](docs/EFFECTS.md)**: every effect and all of its settings.
-- **[Changelog](CHANGELOG.md)**: what changed in each version.
+- **[What's new](https://github.com/ZH1245/rgb-studio-releases/releases)**: every version's release notes.
 
 Found a problem? [Open an issue](https://github.com/ZH1245/rgb-studio-releases/issues).
 
