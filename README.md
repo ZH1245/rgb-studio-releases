@@ -5,7 +5,7 @@ in the spirit of SignalRGB, with no cloud, no accounts and no telemetry. RGB Stu
 
 **[⬇ Download RGB Studio](https://github.com/ZH1245/rgb-studio-releases/releases/latest)** and
 **[⬇ OpenRGB](https://openrgb.org/releases.html)** (required).
-`RGB Studio Setup <version>.exe` is for Windows 10/11, about 2.5 MB. Run it, press Install. Uninstall from
+`RGB Studio Setup <version>.exe` is for Windows 10/11, under 3 MB. Run it, press Install. Uninstall from
 Windows Settings → Apps.
 
 ## What you get
@@ -44,8 +44,9 @@ Windows Settings → Apps.
 RGB Studio **requires [OpenRGB](https://openrgb.org)**: OpenRGB talks to the hardware, RGB Studio drives the
 lights through it. If OpenRGB doesn't see a device, RGB Studio can't either.
 
-1. Install OpenRGB (1.0 or newer), open it **as administrator** so it finds everything (RAM needs this), check
-   your devices show in its window, and start its **SDK Server** (also turn on *start at login*).
+1. Install OpenRGB (**1.1 or newer**; 1.1 fixes a per-LED bug on some MSI boards), open it **as administrator**
+   so it finds everything (RAM needs this), check your devices show in its window, and start its **SDK Server**
+   (also turn on *start at login*).
 2. Close other RGB software (MSI Center / Mystic Light, iCUE, SignalRGB…) so they don't fight over the
    same lights.
 
