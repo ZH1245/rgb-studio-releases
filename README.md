@@ -33,8 +33,11 @@ Windows Settings → Apps.
 - **Light on weak PCs**: music and screen capture only run while one of their effects is showing.
 - **Power saving**: dim, a calm preset or lights off while the screen is off; lights off while the PC sleeps.
 - **✨ Ask an AI**: describe a look, paste the prompt into any chat AI, paste its answer back, preview and
-  apply (no API key needed).
+  apply (no API key needed). The same works for setup: **Set up with AI** takes a sentence about your fans
+  and fills the zones in, checking every header and LED count against what OpenRGB reports.
 - **Mixed fan wiring** per header (series and parallel, any LED count per fan) with an LED walker to map it.
+- **Display scale** (80–125%) for 4K screens, and a tray menu that can start, restart, stop or kill the
+  service.
 - **Tray icon** for lights on/off and presets, a notice when a new version is out, and a one-click
   problem report for GitHub issues.
 - **`rgbctl`** command line: `rgbctl off`, `rgbctl load "Hearth"`, `rgbctl brightness 40`.
