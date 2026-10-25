@@ -13,15 +13,21 @@ Windows Settings → Apps.
 - **A tiny background service** that keeps your lighting running whether or not the app is open (a few MB
   of memory, ~0.1% of one CPU core) and starts when you log in.
 - **The RGB Studio app** to change things: shows whether the service is running, and can start or stop it.
-- **40 effects**, every color-based one with rainbow, palette, your own or random colors:
+- **41 effects**, every color-based one with rainbow, palette, your own or random colors:
   - **Music ♪**: Auto DJ, Stereo field, Beat pulse, Bass relay, Puddles, Spectrum, Mood drift, Sparkle hits.
     Listens to the whole desktop or only the apps you pick (e.g. Spotify), in stereo. *Smooth* or *punchy*.
   - **Screen ▣**: Screen ambience, Screen motion.
   - **Sensors**: GPU / CPU temperature or load on a whole device or just a few LEDs.
+  - **Game 🏎**: Rev lights for Forza Horizon 5, Forza Horizon 6 and Forza Motorsport: the fans fill with the
+    engine revs, blink at the shift point and flash on gear changes, or show throttle & brake. Uses the
+    game's own Data Out, no mods ([setup](docs/GAMES.md)).
   - **Premium**: Relay, Spin & orbit, Silk tides, Aurora, Pacifica, Plasma, Neon chase, Fire, Ripples &
     fireworks, Spotlights, Sweep & lighthouse, Warp galaxy, Bouncing balls, Meteor shower & matrix, Storm.
   - **Classics**: Static/paint, Solid, Breathing/heartbeat, Color flow, Strobe, Candle, Stack/fill/wipe, Wave,
     Comet/scanner, Dissolve, Twinkle/fairy lights, Railway, Sunrise.
+- **31 themes and 84 palettes tuned for LEDs**, a palette playlist, color shuffle and color cycle.
+- **Fan stagger**: one effect can ripple around the case — each fan starts 0–0.5 s after the one before, in
+  order, backwards, or jumping between fans. 0 runs them all together, as before.
 - **Every device on its own or all together**: per-device effects, layers on a few LEDs, brightness per
   device type, device and header, painting single LEDs, presets.
 - **Light on weak PCs**: music and screen capture only run while one of their effects is showing.
@@ -49,6 +55,7 @@ lights through it. If OpenRGB doesn't see a device, RGB Studio can't either.
 - **[User guide](docs/USER_GUIDE.md)**: every screen and option, recipes.
 - **[Effects reference](docs/EFFECTS.md)**: every effect and all of its settings.
 - **[What's new](https://github.com/ZH1245/rgb-studio-releases/releases)**: every version's release notes.
+- **[Racing games](docs/GAMES.md)**: Forza rev lights setup (Data Out), presets and troubleshooting.
 
 Found a problem? [Open an issue](https://github.com/ZH1245/rgb-studio-releases/issues).
 

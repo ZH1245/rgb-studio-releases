@@ -85,5 +85,6 @@ rgbctl --help              everything else
 | The page doesn't open | The service isn't running: start the "RGB Studio" task in Task Scheduler, or run `rgbd.exe` from the install folder. Its log is `%APPDATA%\RGB Studio\rgbd.log`. |
 | "Waiting for OpenRGB" / "Can't reach OpenRGB" | Install OpenRGB, open it, and start its SDK server. RGB Studio reconnects by itself. |
 | No devices, even in OpenRGB's own window (e.g. Corsair RAM) | RGB Studio only sees what OpenRGB detects. Run OpenRGB **as administrator** (RAM and many boards use SMBus, which needs it), fully quit iCUE / MSI Center / Armoury Crate / SignalRGB (also from the tray), use OpenRGB 1.0 or newer (DDR5 support), then OpenRGB → Settings → **Rescan devices**. |
-| Lights flicker or fight | Another RGB program is still running. Close it. |
+| Lights flicker or fight | Another RGB program is still running. Close it (including its tray icon). |
+| Lights flash white for an instant, now and then | One known cause is OpenRGB: builds older than **1.1** mis-handle MSI boards' per-LED Direct mode. Update it first. Then try Settings → Performance → **Device updates per second** lower (fewer frames sent, fewer chances to glitch), and keep the LED cables short. Tray → **I just saw a flash** saves the last 15 seconds of what was sent (`flash-*.txt` next to the log) to attach to a report. |
 | Anything else | In the app: Settings → Report a problem → **Report a problem on GitHub**. It copies a short report (versions, devices, log) to paste into the issue. |

@@ -21,7 +21,8 @@ A tour of every screen and option. For what each effect does and all of its sett
 | **Daisy-chain / splitter** | Daisy-chained fans each get their own data, so they can show different things. Fans on a splitter all receive the same data and always look identical, so they appear as one item marked "×5". |
 | **Chain** | The order items are linked in (Setup → Chain order). Travelling effects (stack, relay, chase, comet…) flow along it, across devices. |
 | **Effect** | The animation a device runs. **Layer**: a second effect drawn on top of some LEDs. |
-| **Preset** | A saved look: effects for every device, layers, painted LEDs, brightness and speed. |
+| **Preset** | A saved look: effects and colors for every device, layers and painted LEDs. Brightness and speed are not part of it, so switching presets never changes them. |
+| **Theme** | A built-in preset ending in "Theme" that dresses each part differently: your first fan header, the other fans, and the RAM (often one color per stick, or off). Some themes put one color family on everything. |
 
 ## Top bar and navigation
 
@@ -80,11 +81,15 @@ columns stack.
 1. **Brightness card**
    - *Everything* — the master brightness.
    - One row per device type, e.g. **Motherboard** or **RAM ×2** (the count shows how many), with a slider and an
-     on/off switch that apply to all of them. Click ▸ to expand: individual devices (RAM 1, RAM 2) or, for a
-     motherboard, its headers (Cosmiq, Splitter).
-   - **reset all** — every device and header back to 100% and on.
-   - Device brightness and on/off are hardware settings: they stay when you switch presets. Header brightness is
-     saved with presets.
+     on/off switch that apply to all of them. Under it: individual devices (RAM 1, RAM 2) or, for a motherboard,
+     its headers, each with its own slider and switch.
+   - A header with more than one fan shows **▸ N fans**: click it for one slider and switch per fan (as set up
+     in Setup, including mixed wiring). A fan wired in parallel with another shows the same LEDs, so it follows
+     that fan and has no switch of its own. Turning a fan or header off only darkens it; the effect keeps
+     running on everything else.
+   - **Reset every device to 100% and on** — every device, header and fan back to 100% and on.
+   - All brightness (master, devices, headers, fans) and on/off stay when you switch presets. Each row also
+     shows what the LEDs actually get ("31% overall" = Everything × device × header × fan).
 2. **Device card** — what you're editing and its state: *applies to every device*, *following All devices*, or
    *own effect*.
    - **Make all follow** (All devices) — removes every device's own effect.
@@ -112,9 +117,32 @@ columns stack.
    effects (✨, × deletes one); a custom effect's card shows its layers and, until saved, **Save to my
    effects**. Under it, the effect's own settings
    (listed per effect in [EFFECTS.md](EFFECTS.md)). Most effects share:
-   - **Colors**: rainbow / palette / custom / random, with the palette row, your color swatches (+ to add,
-     × to remove) or **🎲 Shuffle random colors**.
+   - **Colors**: *Rainbow*, *Palette* or *Custom*.
+     - **Looks good with this effect**: a few colors picked for the effect, each with its mood (hot fire,
+       cool fire, deep sea…). For Fire this includes its own Ember and Spirit flames.
+     - **⏸ Pause animation to compare colors** (also ⏸ next to Speed in the top bar): the lights hold a
+       still picture while every color change still shows at once (music and screen effects keep following
+       the sound and the picture).
+       Play to continue; the service forgets a pause when it restarts.
+     - **Palette**: 84 built-in palettes plus yours, grouped (One color, Two colors, Warm, Nature, Cool,
+       Neon, Themed, Mine) and sorted by color; the chips at the top show one group. *Now* shows what's playing.
+     - **Playlist**: tap 2 or more palettes; they take turns on the lights in that order and crossfade,
+       while the effect keeps its motion. *Next palette every* sets the minutes per palette.
+     - **🎲 Shuffle new colors**: colors that go together (color harmony), never two look-alikes. They
+       become custom colors: tweak them, shuffle again, or type a name and **Save palette** to keep them.
+     - **+ New palette**: starts from the current palette's colors so you can change and save them.
+     - **Color cycle**: the colors travel through the palette while the effect keeps its motion.
+     - On **All devices**, when some parts have their own effect (as in the themes), choose **Every device**
+       (default: the colors reach those parts too, their motion stays) or **Devices following All**.
    - **Speed** and **Direction**.
+5. **Fan stagger** — under the effect settings: when each fan starts, so one effect ripples around the case
+   instead of hitting every fan at once.
+   - The slider is the delay per fan, 0–0.5 s. **0 starts every fan together**, which is how it always worked.
+   - **In order** follows the chain (fan 1, then 2, then 3…), **Backwards** runs the other way, and
+     **Jump around** takes every other fan first, then the rest.
+   - It covers the whole look (every device and layer), and a preset stores it: *Shark Run* (0.14 s, in order)
+     and *Fan Relay* (0.18 s, jumping) use it. The effect keeps running normally — the fans just start at
+     different moments, and particle effects don't speed up.
 
 ### Presets tab
 
@@ -133,6 +161,11 @@ columns stack.
 Every RGB device OpenRGB detects, one card per device (type badge on the right). Changes apply to the hardware
 immediately.
 
+- **✨ Set up with AI** — the fastest way through setup. Describe your build in plain words ("3 fans on the top
+  header, 8 LEDs each; two RAM sticks"), copy the prompt into any chat AI, paste its answer back. RGB Studio
+  checks every zone against what OpenRGB actually reports before showing **What will change**, then applies it.
+  **Undo** puts your previous zones back. Nothing is sent anywhere and no port is opened: you are the only
+  thing carrying the answer between the AI and the app, so it can't be driven from outside.
 - **+ Zone buttons** — add a zone you want to control. Headers default to a fan ring, RAM and strips to a bar,
   single-LED zones to a dot. Devices without a per-LED (Direct) mode can't be controlled and say so.
 - **Zone card**:
@@ -177,10 +210,35 @@ minutes.
   start of each item, or **Whole device**; set **Cool** and **Hot** (pre-filled: 35–80 °C for temperatures,
   0–100% for loads). Colors go blue → green → yellow → red and pulse above *Hot*. Fine-tune afterwards in Studio.
 
-## Settings
+## Racing games (Forza)
+
+**Rev lights** (Change effect → Game) turns your fans into a car's shift lights, using the live data Forza
+sends from Forza Horizon 5, Forza Horizon 6 and Forza Motorsport. No mods: it's the game's own "Data Out"
+feature.
+
+1. In the game: **Settings → HUD and Gameplay → Data Out: On**, **Data Out IP Address: 127.0.0.1**,
+   **Data Out IP Port: 5600**. (Avoid ports 5200–5300; the game uses them itself. To use another port,
+   change it in RGB Studio too: Settings → Performance → Game data port.)
+2. In RGB Studio, put **Rev lights** on the fans (or on everything).
+3. Drive. The fans fill green → yellow → red with the engine revs along the chain (or around each fan),
+   the whole case blinks at the shift point, and every gear change flashes. **Show: throttle & brake**
+   shows the pedals instead. In menus, paused, or with the game closed, a soft glow shows.
+
+RGB Studio only listens for the game while a Game effect is on the lights, and only on this PC (127.0.0.1).
+The **Forza Rev Lights** and **Forza Dash** presets set it up in one click. Full setup, colors and
+troubleshooting: [GAMES.md](GAMES.md).
+
 
 - **Performance**
-  - *Device frame rate cap* (5–60 fps).
+  - *Animation frame rate* (5–60 fps): how often effects are calculated, and the fastest the lights can
+    change. This is what makes fast effects and music look right.
+  - *Lights update rate* (10–60): how often each device is sent a frame. Your lights move at the **lower** of
+    this and the animation rate. Lowering it never slows the animation or the on-screen preview, only the
+    lights, so it is the safe knob for a controller that glitches under a fast stream.
+  - **Per device**: with two or more devices, each gets its own slider under the global one, showing what it
+    is really being sent. Calm one glitchy board, or slow the RAM's slow SMBus, without slowing the rest.
+  - **Reconnect to OpenRGB**: drops the link and sets Direct mode again, for lights that stop responding
+    after OpenRGB restarts or a device is re-plugged (it also reconnects by itself on sleep/wake).
   - *Motion smoothing*: blends frames so motion glides. It doesn't apply to music and screen-motion effects.
   - *Browser preview rate*.
   - *LED gamma* (how brightness levels map to the LEDs).
